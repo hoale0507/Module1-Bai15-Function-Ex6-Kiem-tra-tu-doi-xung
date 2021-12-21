@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let isPalindrome = false;
+    function check(string){
+        let length = string.length;
+        if(string[0] === string[length-1]){
+            isPalindrome = true;
+        }
+        let nextLength = length -1;
+        if (nextLength > length/2){
+            check(string.slice(1,length-2));
+        }
+        return isPalindrome;
+    }
+    let result = check('motor');
+    console.log(result);
+</script>
+</body>
+</html>
